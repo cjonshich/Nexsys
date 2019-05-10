@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Nexsys</string>
+    <!-- Strings related to login -->
+    <string name="graph_id" tools:ignore="TypographyDashes">275dde42-090e-46ef-bc06-113e71969ad0</string>
+    <string name="login_connect_with_365_text">Conectando con Office 365…</string>
+    <string name="login_syncing_info">Sincronizando información</string>
+</resources>

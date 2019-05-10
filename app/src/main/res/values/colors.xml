@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#424242</color>
+    <color name="colorPrimaryDark">#1b1b1b</color>
+    <color name="colorAccent">#b71c1c</color>
+
+    <color name="primaryLightColor">#6d6d6d</color>
+    <color name="secondaryLightColor">#f05545</color>
+    <color name="secondaryDarkColor">#7f0000</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+    <color name="officeButtonColor">#e54128</color>
+    <color name="loginBackground">#80000000</color>
+
+</resources>
