@@ -1,7 +1,10 @@
 package com.cbolije.nexsys.model.api;
 
 import android.app.Application;
+import android.content.Context;
+
 import com.cbolije.nexsys.R;
+import com.cbolije.nexsys.utils.NexsysApp;
 import com.microsoft.graph.authentication.IAuthenticationAdapter;
 import com.microsoft.graph.authentication.MSAAuthAndroidAdapter;
 
@@ -10,13 +13,13 @@ public class GraphAPI {
 
     private static IAuthenticationAdapter authenticationAdapter;
 
-    public static IAuthenticationAdapter getInstance(final Application app) {
+    public static IAuthenticationAdapter getInstance() {
         if (authenticationAdapter == null) {
-
-            authenticationAdapter = new MSAAuthAndroidAdapter(app) {
+            authenticationAdapter = new MSAAuthAndroidAdapter(NexsysApp.getApp()) {
                 @Override
                 public String getClientId() {
-                    return app.getApplicationContext().getString(R.string.graph_id);
+                    //getApplicationContext()
+                    return NexsysApp.getApp().getString(R.string.graph_id);
                 }
 
                 @Override

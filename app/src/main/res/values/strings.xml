@@ -4,4 +4,9 @@
     <string name="graph_id" tools:ignore="TypographyDashes">275dde42-090e-46ef-bc06-113e71969ad0</string>
     <string name="login_connect_with_365_text">Conectando con Office 365…</string>
     <string name="login_syncing_info">Sincronizando información</string>
+    <string name="title_activity_events">EventsActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
