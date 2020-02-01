@@ -8,7 +8,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.cbolije.nexsys.model.bean.Event;
-import com.cbolije.nexsys.model.dto.GraphEvent;
+import com.cbolije.nexsys.model.dto.GraphData;
 import com.cbolije.nexsys.model.repository.EventRepository;
 import com.cbolije.nexsys.viewmodel.states.EventsState;
 
@@ -29,7 +29,7 @@ public class EventsViewModel extends AndroidViewModel {
         return this.state;
     }
 
-    public void processEvents(List<GraphEvent> graphEvents) {
+    public void processEvents(List<com.microsoft.graph.extensions.Event> graphEvents) {
         this.repository.processEvents(graphEvents);
     }
 }

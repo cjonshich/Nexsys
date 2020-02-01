@@ -1,10 +1,7 @@
 package com.cbolije.nexsys.model.api;
 
-import android.app.Application;
-import android.content.Context;
-
 import com.cbolije.nexsys.R;
-import com.cbolije.nexsys.utils.NexsysApp;
+import com.cbolije.nexsys.commons.NexsysApp;
 import com.microsoft.graph.authentication.IAuthenticationAdapter;
 import com.microsoft.graph.authentication.MSAAuthAndroidAdapter;
 

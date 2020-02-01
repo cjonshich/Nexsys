@@ -1,4 +1,4 @@
-package com.cbolije.nexsys.utils;
+package com.cbolije.nexsys.commons;
 
 import android.app.Application;
 import android.content.Context;

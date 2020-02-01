@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.cbolije.nexsys.R;
 import com.cbolije.nexsys.model.api.GraphAPI;
-import com.cbolije.nexsys.utils.NexsysApp;
+import com.cbolije.nexsys.commons.NexsysApp;
 import com.cbolije.nexsys.viewmodel.LoginViewModel;
 import com.cbolije.nexsys.viewmodel.states.LoginState;
 import com.google.gson.Gson;
@@ -29,7 +29,6 @@ import com.microsoft.graph.options.QueryOption;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -94,8 +93,8 @@ public class LoginActivity extends AppCompatActivity {
         IGraphServiceClient client = new GraphServiceClient.Builder().fromConfig(mClientConfig).buildClient();
 
         List<Option> queryOptions = new LinkedList<>();
-        queryOptions.add(new QueryOption("select", "subject,attendees,iCalUId,isCancelled,isOrganizer,createdDateTime,start,end"));
-        queryOptions.add(new QueryOption("filter", "isCancelled eq false"));
+        queryOptions.add(new QueryOption("select", "subject,attendees,iCalUId,isCancelled,createdDateTime,start,end,organizer"));
+        //queryOptions.add(new QueryOption("filter", "isCancelled eq false"));
         //Getting user data
         client.getMe()
                 .getEvents()
@@ -104,7 +103,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void success(IEventCollectionPage iEventCollectionPage) {
                 Gson gson = new Gson();
-                Log.i("GRAPH", gson.toJson(iEventCollectionPage));
+                Log.i("GRAPH", gson.toJson(iEventCollectionPage.getCurrentPage()));
+                mViewModel.processEventsData(iEventCollectionPage.getCurrentPage());
             }
 
             @Override

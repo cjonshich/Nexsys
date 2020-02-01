@@ -3,7 +3,7 @@ package com.cbolije.nexsys.model.local;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.cbolije.nexsys.utils.NexsysApp;
+import com.cbolije.nexsys.commons.NexsysApp;
 
 
 public class PreferenceManager  {
